@@ -1,6 +1,10 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
   <head>
+    <title>
+      BLEM | Home
+    </title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">   
     <style>
       @keyframes spin {
         from {
@@ -11,15 +15,26 @@
         }
       }
     </style>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
   </head>
   <body>
-    <div x-data="{ open: false }">
-      <button @click="open = true">Expand</button>
-      <button @click="open = false">Retract</button>
+    <div x-data="{ open: true }">
+      <div class="fixed box-content h-max w-full rounded-b-2xl block z-51">
+        <button @click="open = ! open" class="relative p-3 bg-indigo-500 box-content h-max w-max text-indigo-200 rounded-2xl mr-2 my-2 inline-block float-right">Burger</button>
+      </div>
       <span x-show="open">
-        Content...
+        <div class="fixed bg-indigo-400 box-content h-max w-full rounded-b-2xl block z-50">
+          <div class="relative p-3 bg-indigo-500 box-content h-max w-max text-indigo-200 rounded-2xl mr-2 my-2 inline-block float-left">
+            <a href="./">  
+              Home
+            </a>
+          </div>
+        </div>
       </span>
+    </div>
+    <div class="relative grid grid-cols-1 gap-4 mx-4 mb-4">
+      <div class="relative p-8"></div>
     </div>
   </body>
 </html>
