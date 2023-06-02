@@ -10,11 +10,6 @@
   </head>
   <body>
     <div x-data="{ open: true }">
-      <div class="fixed w-full block z-99">
-        <button class="relative inline-block float-right m-3 bg-slate-300 p-5 z-100" @click="open=!open">
-          Burger
-        </button>
-      </div>
       <span x-show="open">
         <div class="bg-slate-200 fixed w-full block z-50">
           <div class="relative inline-block float-left m-3 bg-slate-300 p-5">
@@ -22,6 +17,11 @@
           </div>
         </div>
       </span>
+      <div class="fixed w-full block z-99">
+        <button class="relative inline-block float-right m-3 bg-slate-300 p-5 z-100" @click="open=!open">
+          Burger
+        </button>
+      </div>
     </div>
   </body>
 </html>
